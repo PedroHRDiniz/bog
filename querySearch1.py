@@ -177,3 +177,68 @@ from sentiment import SentimentParser
 #     parser = SentimentParser()
 #     tweetdb.insertTweet(movieName, tweet, parser.parse(tweet.text))
 # print "Done..."
+
+
+# movieName = "finest hours"
+# dateSince = "2016-01-15"
+# dateUntil = "2016-02-29"
+# print "Searching tweets for " + movieName
+# start = time.time()
+# tweetCriteria = got.manager.TweetCriteria().setQuerySearch(movieName).setSince(dateSince).setUntil(dateUntil).setMaxTweets(10000)
+# tweets = got.manager.TweetManager.getTweets(tweetCriteria)
+# end = time.time()
+# print "Got " + str(len(tweets)) + " and it took " + str(end - start) + " seconds. Adding them to the database..."
+
+# for tweet in tweets:
+#     parser = SentimentParser()
+#     tweetdb.insertTweet(movieName, tweet, parser.parse(tweet.text))
+# print "Done..."
+
+
+# movieName = "gods of egypt"
+# dateSince = "2016-02-12"
+# dateUntil = "2016-03-26"
+# print "Searching tweets for " + movieName
+# start = time.time()
+# tweetCriteria = got.manager.TweetCriteria().setQuerySearch(movieName).setSince(dateSince).setUntil(dateUntil).setMaxTweets(10000)
+# tweets = got.manager.TweetManager.getTweets(tweetCriteria)
+# end = time.time()
+# print "Got " + str(len(tweets)) + " and it took " + str(end - start) + " seconds. Adding them to the database..."
+
+# for tweet in tweets:
+#     parser = SentimentParser()
+#     tweetdb.insertTweet(movieName, tweet, parser.parse(tweet.text))
+# print "Done..."
+
+
+# movieName = "zoolander 2"
+# dateSince = "2016-01-29"
+# dateUntil = "2016-03-12"
+# print "Searching tweets for " + movieName
+# start = time.time()
+# tweetCriteria = got.manager.TweetCriteria().setQuerySearch(movieName).setSince(dateSince).setUntil(dateUntil).setMaxTweets(10000)
+# tweets = got.manager.TweetManager.getTweets(tweetCriteria)
+# end = time.time()
+# print "Got " + str(len(tweets)) + " and it took " + str(end - start) + " seconds. Adding them to the database..."
+
+# for tweet in tweets:
+#     parser = SentimentParser()
+#     tweetdb.insertTweet(movieName, tweet, parser.parse(tweet.text))
+# print "Done..."
+
+
+# nope
+movieName = "jack and jill"
+dateSince = "2011-10-28"
+dateUntil = "2011-12-11"
+print "Searching tweets for " + movieName
+start = time.time()
+tweetCriteria = got.manager.TweetCriteria().setQuerySearch(movieName).setSince(dateSince).setUntil(dateUntil).setMaxTweets(10000)
+tweets = got.manager.TweetManager.getTweets(tweetCriteria)
+end = time.time()
+print "Got " + str(len(tweets)) + " and it took " + str(end - start) + " seconds. Adding them to the database..."
+
+for tweet in tweets:
+    parser = SentimentParser()
+    tweetdb.insertTweet(movieName, tweet, parser.parse(tweet.text))
+print "Done..."
